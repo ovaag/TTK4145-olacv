@@ -17,7 +17,7 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
- > *Your answer here*
+ > I would say both. Mostly easier since it allows the user to run multiple task simultaneously, but the complexity increases.
  
  ### What are the differences between processes, threads, green threads, and coroutines?
  > Process: Part of a program that is being executed by one or multiple threads
@@ -30,10 +30,9 @@ When answering the questions, remember to use all the resources at your disposal
  > They all starts a new thread
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > GIL is protecting pythons memory by only allowing one thread at a time to access the memory.
- 
+ > GIL only allows one thread to run at the same time. This means that the code will not execute as fast as it possibly could if multiple thread where running simultaneously.
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > The python multiprocessing module 
+ > The python multiprocessing module spawns more interpreters. This can be utilized as a workaround GIL.
  
  ### What does `func GOMAXPROCS(n int) int` change? 
  > The function changes the maximum number of CPUs that can be executing simultaneously.
